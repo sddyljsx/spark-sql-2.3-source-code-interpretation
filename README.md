@@ -10,9 +10,9 @@ spark sql 2.3 源码解读
 
 [2.3-antlr4&&SparkSqlParser](spark%20sql%202.3%20源码解读%20-%20antlr4%20&&%20SparkSqlParser%20(2.3).md)
 
-[3.1-Analyzer](spark%20sql%202.3%20源码解读%20-%20Analyzer%20(3.1).md)
+[3.1-Analyzer](spark%20sql%202.3%20源码解读%20-%20Analyzer%20%20(3.1).md)
 
-[3.2-Analyzer](spark%20sql%202.3%20源码解读%20-%20Analyzer%20(3.2).md)
+[3.2-Analyzer](spark%20sql%202.3%20源码解读%20-%20Analyzer%20%20(3.2).md)
 
 [4-Optimizer](spark%20sql%202.3%20源码解读%20-%20Optimizer%20(4).md)
 
