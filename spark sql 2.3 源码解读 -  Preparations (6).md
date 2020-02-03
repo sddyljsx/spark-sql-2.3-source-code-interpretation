@@ -266,7 +266,7 @@ spark.sql("SELECT A.B FROM A ORDER BY A.B").collectAsList()
 ```
 执行到prepare时断点调试一下：
 
-![屏幕快照 2018-08-15 下午3.40.56](https://ws2.sinaimg.cn/large/006tNbRwly1fuafsv7qidj31gg09242k.jpg)
+![6.1](./assets/6.1.png)
 
 requireChildDistribution 是 OrderedDistribution, 但 child的outputPartitioning是null，所以会触发添加ShuffleExchangeExec的逻辑。
 

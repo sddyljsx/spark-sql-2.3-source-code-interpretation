@@ -2,7 +2,7 @@ spark sql 2.3 源码解读 - antlr4 && SparkSqlParser (2.3)
 
 ​    接着上一节，继续讲。还是以 SELECT A.B FROM A 为例。
 
-![屏幕快照 2018-08-12 下午5.00.15](https://ws1.sinaimg.cn/large/006tNbRwly1fu70ydb5wij30os0tewhk.jpg)
+![2.3](./assets/2.3.png)
 
 ​    查看AstBuilder逻辑，遍历访问，最终会访问到querySpecification节点：
 
@@ -188,7 +188,7 @@ case class Project(projectList: Seq[NamedExpression], child: LogicalPlan) extend
 ```
 ​     我们断点调试一下，结果确实是这样：
 
-![屏幕快照 2018-08-12 下午9.17.00](https://ws4.sinaimg.cn/large/006tNbRwly1fu78c51dcpj30v005mq4k.jpg)
+![2.4](./assets/2.4.png)
 
 ​     从上面我们也已经看到了LogicalPlan是Tree，每一个节点都继承自TreeNode.  Spark Sql 的LogicalPlan、Expression、PhysicalPlan全都是用Tree表示的，后面都会讲到。
 

@@ -88,7 +88,7 @@ protected def analyzer: Analyzer = new Analyzer(catalog, conf) {
 
 我们在上一章得到的 Unresolved Logical Plan为：
 
-![屏幕快照 2018-08-12 下午9.17.00](https://ws4.sinaimg.cn/large/006tNbRwly1fu78c51dcpj30v005mq4k.jpg)
+![2.4](./assets/2.4.png)
 
 ​    里面有一个UnresolvedRelation，所以我们看一下这个rule，看他的注释，将UnresolvedRelation替换为SessionCatalog中的真实的数据表信息。
 
@@ -246,6 +246,6 @@ protected lazy val catalog: SessionCatalog = {
 !+- 'UnresolvedRelation `A`   +- SubqueryAlias a
 !                                +- Relation[B#6] json
 ```
-![屏幕快照 2018-08-13 上午11.10.07](https://ws2.sinaimg.cn/large/006tNbRwly1fu7wicrv4yj30v405cab9.jpg)
+![3.1](./assets/3.1.png)
 
 resolved = true， Unresolved Logical Plan 转化为了 Resolved Logical Plan
