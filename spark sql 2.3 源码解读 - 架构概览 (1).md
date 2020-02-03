@@ -2,13 +2,13 @@ spark sql 2.3 源码解读 - 架构概览 (1)
 
 ​    spark sql 的前身是shark，类似于 hive， 用户可以基于spark引擎使用sql语句对数据进行分析，而不用去编写程序代码。
 
-![屏幕快照 2018-08-12 下午2.55.58](https://ws1.sinaimg.cn/large/006tNbRwly1fu6xlztqzyj30ni0ec40y.jpg)
+![1.1](./assets/1.1.jpg)
 
 ​    上图很好的展示了spark sql的功能，提供了 jdbc，console，编程接口三种方式来操作RDD(Resilient Distributed Datasets)，用户只需要编写sql即可，不需要编写程序代码。
 
 ​    spark sql的运行流程如下：
 
-![屏幕快照 2018-08-12 下午2.56.38](https://ws1.sinaimg.cn/large/006tNbRwly1fu6y90emdkj31i20dogq7.jpg)
+![1.2](./assets/1.2.jpg)
 
   大概有6步：
 
