@@ -458,19 +458,19 @@ spark.sql("SELECT A.B FROM A JOIN C ON A.B = C.B").explain()
 执行withExchangeCoordinator前：
 
 
-![屏幕快照 2018-08-16 下午2.36.59](https://ws4.sinaimg.cn/large/0069RVTdly1fubtpt7f44j31ck0eun38.jpg)
+![7.1](./assets/7.1.png)
 
 执行withExchangeCoordinator后：
 
 生成了coordinator，且执行了 doPrepare后，可以看到两个exchange都向其注册了。
 
-![屏幕快照 2018-08-16 下午8.16.28](https://ws4.sinaimg.cn/large/0069RVTdly1fubtpm6acbj31c80fggrp.jpg)
+![7.2](./assets/7.2.png)
 
 doExecute后：
 
 原先的numPartitions是200，经过执行后，生成的partitionStartIndices为[1],也就是只有1个partition，显然在测试数据量很小的情况下，1个partition是更为合理的。这就是ExchangeCoordinator的功劳。
 
-![屏幕快照 2018-08-16 下午8.29.29](https://ws1.sinaimg.cn/large/0069RVTdly1fubtpkg184j31cs0k2jya.jpg)
+![7.3](./assets/7.3.png)
 
 execute 最终的输出是rdd，剩下的结果便是spark对rdd的运算了。其实 spark sql 最终的目标便也是生成rdd，交给spark core来运算。
 

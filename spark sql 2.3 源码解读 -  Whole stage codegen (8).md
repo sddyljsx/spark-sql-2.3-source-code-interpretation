@@ -8,7 +8,7 @@ whole stage codegen对性能有很大的提升。
 
 如下图所示，将一棵树翻译成了一段代码执行，性能肯定会大幅提升。
 
-![whole-stage-code-generation-model](https://ws1.sinaimg.cn/large/006tNbRwly1fuco5f27z1j30if06lt96.jpg)
+![8.1](./assets/8.1.png)
 
 codegen的更多原理以及测试结果：
 
